@@ -1,0 +1,28 @@
+<html>
+<body style="text-align:center; background-color:rgb(181, 119, 240)">
+<h2>pop()</h2>
+<h2>ForEach()</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = "<hr><b>PopFunction</b><br><hr>"+"Before pop : [" + fruits+"]";
+fruits.pop();
+document.getElementById("demo2").innerHTML = "After pop : [" + fruits+"]";
+
+const numbers = [1, 2, 3, 4, 5];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo3").innerHTML ="<hr><b>For Each Loop</b>" +"<br><hr>"+ txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+

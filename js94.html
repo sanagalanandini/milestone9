@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+const unfold = (fn, seed) => {
+    let result = [],
+      val = [null, seed];
+    while ((val = fn(val[1]))) result.push(val[0]);
+    document.getElementById("demo").innerHTML=result;
+  };
+  var f = n => (n > 50 ? false : [-n, n + 10]);
+  console.log(unfold(f, 10));
+  </script>
+  </body>
+  </html>
